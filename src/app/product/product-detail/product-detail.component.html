@@ -1,0 +1,32 @@
+<div class="container">
+<div *ngIf="productDetails | async as product" class="text-center">
+<div  style="margin-left: 1cm; " >
+  <div   >
+    
+    <mat-card  class="card" *ngIf="productDetails | async as product" >
+      <mat-card-title  style="text-align: center">
+
+          <strong><mat-card-header class="header">{{product.title}}</mat-card-header>
+           </strong
+          >
+  
+        
+    </mat-card-title>
+      <mat-card-content> 
+    
+        <img
+        mat-card-image
+        src="{{product.image}} " 
+      />
+      <p>{{product.description}}</p>
+        <p><strong>{{product.price.toFixed(2)}} €</strong></p>
+        <p>Rate : {{product.rating.rate}} of 5 </p>
+        <p>Available : {{product.rating.count}} </p>
+      </mat-card-content>
+      
+    
+    </mat-card>
+ </div>
+</div>  
+</div>
+</div>

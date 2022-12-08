@@ -1,0 +1,42 @@
+.card {
+    border: 1cm;
+    width: 1000px;
+    padding: 40px;
+    position: absolute;
+    top:45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(58, 58, 58);
+    background: linear-gradient(90deg,rgb(38, 241, 180) 0%, hsla(260, 29%,36%,1) 100%);
+    justify-content: center;
+}
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+    width: 900px;
+}
+.submit{
+    margin-left: 35%;
+}
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    
+} 
+label {
+    /* Other styling... */
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+    width: 100px;
+}
+input {
+    height: 30px;
+    width: 200px;
+    border: 1px solid #000;
+    margin-right: 100px;
+    margin-left: 15px;
+    margin-top: 10px;
+}

@@ -1,0 +1,65 @@
+
+            <div class="card">
+                <div class="text-center">
+                     <h1>Sign up </h1>
+                     <h6>Register! </h6>
+                </div>
+            <div >
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                  <div class="form-group">
+                    <label for="name" class="control-label font-weight-bold">Name</label>
+                    <input type="text" class="form-control" formControlName="name" placeholder="Your name" 
+                      [ngClass]="{ 'is-valid': signupForm.controls['name'].invalid && (signupForm.controls['name'].dirty || submitted) && !signupForm.controls['name'].errors, 'is-invalid': (signupForm.controls['name'].dirty || submitted) && signupForm.controls['name'].errors }" />
+                    <div class="invalid-feedback">
+                      <span class="text-danger" *ngIf="signupForm.controls['name'].errors?.['required'] ">Name  is required</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="surname" class="control-label font-weight-bold">Surname</label>
+                    <input type="text" class="form-control" formControlName="surname" placeholder="Your surname" 
+                      [ngClass]="{ 'is-valid': signupForm.controls['surname'].invalid && (signupForm.controls['surname'].dirty || submitted) && !signupForm.controls['surname'].errors, 'is-invalid': (signupForm.controls['surname'].dirty || submitted) && signupForm.controls['surname'].errors }" />
+                    <div class="invalid-feedback">
+                      <span class="text-danger" *ngIf="signupForm.controls['surname'].errors?.['required'] ">Surname  is required</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="username" class="control-label font-weight-bold">Username</label>
+                    <input type="text" class="form-control" formControlName="username" placeholder="Your username" 
+                      [ngClass]="{ 'is-valid': signupForm.controls['username'].invalid && (signupForm.controls['username'].dirty || submitted) && !signupForm.controls['username'].errors, 'is-invalid': (signupForm.controls['username'].dirty || submitted) && signupForm.controls['username'].errors }" />
+                    <div class="invalid-feedback">
+                      <span class="text-danger" *ngIf="signupForm.controls['username'].errors?.['required'] ">Username  is required</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="control-label font-weight-bold">Email address</label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="Your email address" 
+                      [ngClass]="{ 'is-valid': signupForm.controls['email'].invalid && (signupForm.controls['email'].dirty || submitted) && !signupForm.controls['email'].errors, 'is-invalid': (signupForm.controls['email'].dirty || submitted) && signupForm.controls['email'].errors }" />
+                    <div class="invalid-feedback">
+                      <span class="text-danger" *ngIf="signupForm.controls['email'].errors?.['required'] ">Email address is required</span>
+                      <span class="text-danger" *ngIf="signupForm.controls['email'].errors?.['email']">Email address is not valid</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="control-label font-weight-bold">Password</label>
+                    <input type="text" class="form-control" formControlName="password" placeholder="Your password" 
+                      [ngClass]="{ 'is-valid': signupForm.controls['password'].invalid && (signupForm.controls['password'].dirty || submitted) && !signupForm.controls['password'].errors, 'is-invalid': (signupForm.controls['password'].dirty || submitted) && signupForm.controls['password'].errors }" />
+                    <div class="invalid-feedback">
+                      <span class="text-danger" *ngIf="signupForm.controls['password'].errors?.['required'] ">Password  is required</span>
+                      <span class="text-danger" *ngIf="signupForm.controls['password'].errors?.['pattern']">Password  is not valid</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="photo" class="control-label font-weight-bold">Photo</label>
+                    <input #photo type="file" id="photo"    class="form-control" formControlName="image" placeholder="Your profile photo"  accept="image/png, image/jpeg"
+                       />
+                      
+                  </div>
+                  
+              <div class="text-center">
+                <span>
+                    <button type="submit" class="btn btn-primary"  [disabled]="!signupForm.valid"><h5>Sign up </h5></button> <a routerLink="/login" routerLinkActive="active" style="margin-left: 1cm;"  >
+                    Login
+                              </a></span></div>
+                  </form>
+            </div> 
+            </div>

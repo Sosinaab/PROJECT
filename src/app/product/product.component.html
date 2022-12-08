@@ -1,0 +1,35 @@
+<div class="container">
+<div  style="margin-left: 1cm; " >
+    <div style="display:flex; flex-direction: row; flex-wrap: wrap; " >
+      
+      <mat-card  class="card" *ngFor="let product of products | orderBy : order" >
+        <mat-card-title fxLayout="row" fxLayoutAlign="space-between center">
+
+            <strong><mat-card-header class="header">{{product.title}}</mat-card-header>
+             </strong
+            >
+    
+          
+      </mat-card-title>
+        <mat-card-content> 
+      
+          <img
+          mat-card-image
+          src="{{product.image}} " 
+        />
+        <p></p>
+        
+
+        
+          <p><strong>{{product.price.toFixed(2)}}</strong> €</p>
+        </mat-card-content>
+        <mat-card-footer class="mat-card-footer">
+          <mat-card-actions>
+            <button *ngIf="currentUser" mat-button (click)="addtocart(product)"><mat-icon>add_shopping_cart</mat-icon></button>
+            <button mat-button  (click)="viewDetails(product)">View Details</button>
+          </mat-card-actions>
+        </mat-card-footer>
+      
+      </mat-card>
+   </div>
+</div>  </div>

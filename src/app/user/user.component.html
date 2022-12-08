@@ -1,0 +1,100 @@
+<div class="container">
+   <div *ngIf="user">
+
+      <div class="card">
+         <div class="text-center">
+              <h1>Welcome  </h1>
+          <h4>{{user.name.firstname.toUpperCase()}}</h4>
+         </div>
+     <div ><form [formGroup]="editForm" (ngSubmit)="update()">
+      <div class="float-container">
+           
+            <div class="float-child"  >
+            <div >
+              
+              <p style="text-align: center;"> <strong >User Data :</strong> </p>
+              
+             </div> 
+            
+             <div class="form-group">
+               <label for="firstname" class="control-label font-weight-bold">First name : </label><input type="text" class="form-control" formControlName="firstname"  value="{{editForm.value.firstname}}"
+                 />
+              
+             </div> 
+             <div class="form-group">
+               <label for="lastname" class="control-label font-weight-bold">Last name :</label> <input type="text" class="form-control" formControlName="lastname"  value="{{editForm.value.lastname}}"
+                 />
+              
+             </div> 
+             <div class="form-group">
+               <label for="username" class="control-label font-weight-bold">Username : </label><input type="text" class="form-control" formControlName="username"  value="{{editForm.value.username}}"
+                 />
+              
+             </div> 
+             <div class="form-group">
+               <label for="phone" class="control-label font-weight-bold">Phone number :</label> <input type="text" class="form-control" formControlName="phone"  value="{{editForm.value.phone}}"
+                 />
+              
+             </div> 
+            <div class="form-group">
+               <label for="email" class="control-label font-weight-bold">Email address : </label><input type="email" [readonly]="true" class="form-control" formControlName="email"  value="{{editForm.value.email}}"
+                 />
+              
+             </div>
+             <div class="form-group">
+               <label for="password" class="control-label font-weight-bold">Password :</label> <input type="password" class="form-control" formControlName="password"  value="{{editForm.value.password}}"
+                 />
+              
+             </div>
+            </div>
+            <div class="float-child" >
+               <div >
+                 
+                  <p style="text-align: center;"> <strong >Address :</strong></p> 
+                 
+                </div> 
+                
+                <div class="form-group">
+                 
+                  <label for="lat" class="control-label font-weight-bold"><strong >Geolocation :</strong> Latitude :</label> <input type="text" class="form-control" formControlName="lat"  value="{{editForm.value.lat}}"
+                    />
+                 
+                </div> 
+                <div class="form-group">
+                  <label for="long" class="control-label font-weight-bold"><strong >Geolocation:</strong> Longitude:</label> <input type="text" class="form-control" formControlName="long"  value="{{editForm.value.long}}"
+                  />
+                 
+                </div>  
+               <div class="form-group">
+                  <label for="city" class="control-label font-weight-bold">City : </label>
+                  <input type="text" class="form-control" formControlName="city"  value="{{editForm.value.city}}" 
+                    />
+                 
+                </div> 
+                <div class="form-group">
+                  <label for="street" class="control-label font-weight-bold">Street : </label>
+                  <input type="text" class="form-control" formControlName="street"  value="{{editForm.value.street}}"
+                    />
+                 
+                </div> 
+                
+                <div class="form-group">
+                  <label for="number" class="control-label font-weight-bold">number :</label> <input type="number" class="form-control" formControlName="number"  value="{{editForm.value.number}}"
+                    />
+                 
+                </div> 
+               <div class="form-group">
+                  <label for="zipcode" class="control-label font-weight-bold">Zipcode : </label><input type="text" class="form-control" formControlName="zipcode"  value="{{editForm.value.zipcode}}"
+                    />
+                 
+                </div>
+                
+               </div>
+            <input type="submit" name="submit" class="submit" value="Submit" /><br /> 
+
+            
+         </div></form>
+     </div> 
+     </div>
+   </div>
+</div>

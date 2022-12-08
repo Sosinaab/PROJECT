@@ -1,0 +1,49 @@
+<div class="container">
+<div class="row">
+    <div class="col-m-md-6">
+        <div class="card">
+            <div class="text-center">
+                 <h1>Login</h1>
+                 <h6>Please enter your email & password </h6>
+            </div>
+          
+            <form [formGroup]="loginForm" (ngSubmit)="Login()">
+              <!-- <div class="form-group">
+                <label for="email" class="control-label font-weight-bold">Email address</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Your email address" 
+                  [ngClass]="{ 'is-valid': loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || submitted) && !loginForm.controls['email'].errors, 'is-invalid': (loginForm.controls['email'].dirty || submitted) && loginForm.controls['email'].errors }" />
+                <div class="invalid-feedback">
+                  <span class="text-danger" *ngIf="loginForm.controls['email'].errors?.['required'] ">Email address is required</span>
+                  <span class="text-danger" *ngIf="loginForm.controls['email'].errors?.['email']">Email address is not valid</span>
+                </div>
+              </div> -->
+              <div class="form-group">
+                <label for="username" class="control-label font-weight-bold">Username</label>
+                <input type="text" class="form-control" formControlName="username" placeholder="Your username" 
+                  [ngClass]="{ 'is-valid': loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || submitted) && !loginForm.controls['username'].errors, 'is-invalid': (loginForm.controls['username'].dirty || submitted) && loginForm.controls['username'].errors }" />
+                <div class="invalid-feedback">
+                  <span class="text-danger" *ngIf="loginForm.controls['username'].errors?.['required'] ">Username is required</span>
+                  <!-- <span class="text-danger" *ngIf="loginForm.controls['username'].errors?.['email']">Username is not valid</span> -->
+                </div>
+              </div> 
+              <div class="form-group">
+                <label for="password" class="control-label font-weight-bold">Password</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Your password" 
+                  [ngClass]="{ 'is-valid': loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || submitted) && !loginForm.controls['password'].errors, 'is-invalid': (loginForm.controls['password'].dirty || submitted) && loginForm.controls['password'].errors }" />
+                <div class="invalid-feedback">
+                  <span class="text-danger" *ngIf="loginForm.controls['password'].errors?.['required'] ">Password  is required</span>
+                  <!-- <span class="text-danger" *ngIf="loginForm.controls['password'].errors?.['pattern']">Password  is not valid</span> -->
+                </div>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button> 
+                <p></p>
+                <span>  <a routerLink="/signup" > Are you new here ? Click to Sign up !</a></span>
+             </div> 
+            </form>
+              
+              
+        </div>
+
+    </div>
+</div>

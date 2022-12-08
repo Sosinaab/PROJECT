@@ -1,0 +1,40 @@
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .mat-mdc-icon-button .mat-mdc-button-touch-target {
+   position: absolute;
+   top: 50%;
+   height: 48px;
+   left: 50%;
+   width: 48px;
+   transform: translate(-50%, -50%);
+}
+.container {
+   max-width: 100%;
+  
+}
+element.style {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   
+}
+div {
+   display: block;
+}
+.mat-icon-button {
+   text-align: center;
+margin-bottom: 40px;
+     margin-left: 30px;
+     margin-right: 30px;
+     height: 24px;
+     width: 24px;
+} 
+a {
+   color: white;
+   margin-left: 25px;
+   text-align: center;
+   text-decoration:none ;
+}
